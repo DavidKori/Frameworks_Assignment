@@ -9,7 +9,7 @@ from collections import Counter
 
 def load_data(filepath: str) -> pd.DataFrame:
     try:
-        df = pd.read_csv(filepath, low_memory=False)
+        df = pd.read_csv(metadata.csv, low_memory=False)
         print(f"Data loaded. Shape: {df.shape}")
         return df
     except FileNotFoundError:
